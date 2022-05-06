@@ -1,4 +1,4 @@
-function CreateMember(member: agmp_interface.IMember) {
+function CreateMember(member: my_interface.IMember) {
   console.log(member.ID)
 }
 
