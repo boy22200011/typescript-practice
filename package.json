@@ -1,0 +1,30 @@
+{
+  "name": "mysidetest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "tslint -p tsconfig.json",
+    "fix-paths": "tspath -f",
+    "build": "npm run lint && tsc -p . && npm run fix-paths",
+    "format": "prettier --write \"src/**/*.ts\" ",
+    "clean": "rm -rf node_modules package-lock.json ./src/**/*.d.ts ./src/**/*.js",
+    "reinstall": "npm run clean && npm install",
+    "rebuild": "npm run reinstall && npm run build"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "knex": "^2.0.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "prettier": "^2.6.2",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "tspath": "^1.3.7",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "util": "^0.12.4"
+  }
+}
